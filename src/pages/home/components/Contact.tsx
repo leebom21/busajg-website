@@ -372,7 +372,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={status === "loading"}
-                      className="flex h-14 flex-1 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md bg-primary-500 text-base font-black text-foreground-950 transition-colors hover:bg-primary-400 disabled:opacity-70"
+                      className="flex h-14 min-h-[56px] flex-1 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md bg-primary-500 text-base font-black text-foreground-950 transition-colors hover:bg-primary-400 disabled:opacity-70"
                     >
                       {status === "loading" ? (
                         <>
