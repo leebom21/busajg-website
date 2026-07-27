@@ -71,35 +71,17 @@
   --font-heading: "Black Han Sans", "Noto Sans KR", sans-serif;
   --font-body: "Noto Sans KR", system-ui, sans-serif;
   --font-label: "Bebas Neue", "Noto Sans KR", sans-serif;
-
-    width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-
   font-family: var(--font-body);
   background-color: oklch(var(--background-50));
   color: oklch(var(--foreground-900));
   -webkit-font-smoothing: antialiased;
-}
-
-img,
-video,
-svg {
-  max-width: 100%;
 }
 
 /* Honeypot field hidden style - not obvious */
