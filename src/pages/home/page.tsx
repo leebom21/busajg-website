@@ -11,7 +11,7 @@ import Footer from "@/pages/home/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-w-[1024px] bg-background-50 text-foreground-900">
+  <main className="w-full min-w-0 bg-background-50 text-foreground-900">      
       <Navbar />
       <Hero />
       <MarqueeStrip />
