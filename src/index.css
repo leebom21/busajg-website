@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background - warm off-white / dark industrial tones */
+  --background-50: 0.985 0.005 60;
+  --background-100: 0.965 0.008 60;
+  --background-200: 0.93 0.01 60;
+  --background-300: 0.87 0.012 60;
+  --background-400: 0.72 0.015 60;
+  --background-500: 0.55 0.018 60;
+  --background-600: 0.38 0.02 60;
+  --background-700: 0.28 0.018 60;
+  --background-800: 0.2 0.015 60;
+  --background-900: 0.14 0.012 60;
+  --background-950: 0.08 0.01 60;
+
+  /* Primary - construction orange */
+  --primary-50: 0.975 0.02 55;
+  --primary-100: 0.94 0.05 55;
+  --primary-200: 0.88 0.09 55;
+  --primary-300: 0.82 0.14 55;
+  --primary-400: 0.74 0.18 55;
+  --primary-500: 0.68 0.2 50;
+  --primary-600: 0.6 0.21 45;
+  --primary-700: 0.52 0.19 42;
+  --primary-800: 0.42 0.16 40;
+  --primary-900: 0.34 0.13 38;
+  --primary-950: 0.24 0.1 38;
+
+  /* Accent - amber / yellow */
+  --accent-50: 0.98 0.02 90;
+  --accent-100: 0.95 0.05 90;
+  --accent-200: 0.9 0.1 90;
+  --accent-300: 0.85 0.14 88;
+  --accent-400: 0.8 0.17 86;
+  --accent-500: 0.76 0.18 82;
+  --accent-600: 0.68 0.18 78;
+  --accent-700: 0.58 0.16 72;
+  --accent-800: 0.46 0.13 68;
+  --accent-900: 0.36 0.11 64;
+  --accent-950: 0.24 0.08 62;
+
+  /* Secondary - neutral steel gray */
+  --secondary-50: 0.97 0.003 260;
+  --secondary-100: 0.94 0.005 260;
+  --secondary-200: 0.88 0.008 260;
+  --secondary-300: 0.78 0.01 260;
+  --secondary-400: 0.65 0.012 260;
+  --secondary-500: 0.5 0.015 260;
+  --secondary-600: 0.4 0.015 260;
+  --secondary-700: 0.32 0.013 260;
+  --secondary-800: 0.24 0.01 260;
+  --secondary-900: 0.17 0.008 260;
+  --secondary-950: 0.11 0.006 260;
+
+  /* Foreground - text neutrals */
+  --foreground-50: 0.985 0.003 60;
+  --foreground-100: 0.96 0.004 60;
+  --foreground-200: 0.9 0.005 60;
+  --foreground-300: 0.8 0.006 60;
+  --foreground-400: 0.65 0.008 60;
+  --foreground-500: 0.5 0.01 60;
+  --foreground-600: 0.38 0.012 60;
+  --foreground-700: 0.28 0.012 60;
+  --foreground-800: 0.2 0.01 60;
+  --foreground-900: 0.13 0.008 60;
+  --foreground-950: 0.07 0.006 60;
+
+  --font-heading: "Black Han Sans", "Noto Sans KR", sans-serif;
+  --font-body: "Noto Sans KR", system-ui, sans-serif;
+  --font-label: "Bebas Neue", "Noto Sans KR", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: oklch(var(--background-50));
+  color: oklch(var(--foreground-900));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Honeypot field hidden style - not obvious */
+.field-alt-wrap {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Diagonal stripe background - construction site vibe */
+.stripe-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    oklch(var(--foreground-950)) 0,
+    oklch(var(--foreground-950)) 12px,
+    oklch(var(--primary-500)) 12px,
+    oklch(var(--primary-500)) 24px
+  );
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(oklch(var(--foreground-950) / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(var(--foreground-950) / 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Marquee scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-floatY {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out both;
+}
