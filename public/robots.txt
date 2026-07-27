@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://busajg.co.kr/sitemap.xml
