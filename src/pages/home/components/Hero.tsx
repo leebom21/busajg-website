@@ -77,7 +77,7 @@ export default function Hero() {
             {/* Trust stats */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-background-50/15 max-w-lg">
               {[
-                { n: "12+", l: "년 현장 경력" },
+                { n: "30+", l: "년 현장 경력" },
                 { n: "3,000+", l: "누적 작업 현장" },
                 { n: "24H", l: "신속 응대" },
               ].map((s) => (

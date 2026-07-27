@@ -16,7 +16,7 @@ export default function About() {
                   className="text-primary-500 text-5xl leading-none"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
-                  12년+
+                  30년+
                 </div>
                 <div className="text-sm mt-2 text-background-200">
                   현장에서 다져진 노하우로 어떤 작업이든 깔끔하게 마무리합니다.
